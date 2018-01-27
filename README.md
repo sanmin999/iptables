@@ -100,7 +100,11 @@ sudo vim /etc/network/if-pre-up.d/iptables
 chmod +x /etc/network/if-pre-up.d/iptables
 ```
 第五:其它
-如果你想设置某ip段可以访问所有服务,你需要在iptables.test.rules文件中加入-A INPUT -m iprange --src-range 192.168.1.1-192.168.1.199 -j ACCEPT,然后从第三步再设置一次.注意iptables.test.rules不是必须的,它只是让你的修改时,能更好的测试.
+如果你想设置某ip段可以访问所有服务,你需要在iptables.test.rules文件中加入
+```Bash
+-A INPUT -m iprange --src-range 192.168.1.1-192.168.1.199 -j ACCEPT
+```
+然后从第三步再设置一次.注意iptables.test.rules不是必须的,它只是让你的修改时,能更好的测试.
 
 转载至：
-http://www.voland.com.cn/category/technique/config/page/2 "夜世界"
+"夜世界" http://www.voland.com.cn/category/technique/config/page/2 
